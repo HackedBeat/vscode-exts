@@ -38,11 +38,11 @@ const getComponentName = (vscode) => {
 }
 
 const createComponentCode = (componentName) => {
-  const boilerplate = `import React from 'react';
+  const boilerplate = `import React, { Component } from 'react';
 
-    class ${componentName} extends React.Component {
-      constructor() {
-        super();
+    class ${componentName} extends Component {
+      constructor(props) {
+        super(props);
         this.state = {
           someKey: 'someValue'
         };
